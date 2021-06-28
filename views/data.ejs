@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+    <html>
+    <head> 
+        <title>BCT0218nBCT0184</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+    </head>
+    <body>
+        <style type="text/css">
+
+            html,
+            body,
+            header,
+            #intro-section {
+                height: 100%;
+            }
+            header
+            {
+                background: linear-gradient(to right, #9c27b0, #8ecdff);
+                overflow-x: hidden;
+                overflow-y: hidden;
+            }
+
+            @media (max-width: 740px) {
+                html,
+                body,
+                header,
+                #intro-section {
+                    height: 100vh;
+                }
+            }
+            .logo{
+                flex-basis:20%;
+            }
+            .logo img{
+                width:30px;
+                text-align: center;
+            }
+            
+
+            .img-fluid
+            {
+                height: 400px;
+                width:490px;
+            }
+
+            .top-nav-collapse, .page-footer {
+                background-color: #563e91 !important;
+            }
+
+            .navbar:not(.top-nav-collapse) {
+                background: transparent !important;
+            }
+
+            @media (max-width: 991px) {
+                .navbar:not(.top-nav-collapse) {
+                    background: #563e91 !important;
+                }
+            }
+
+            .backimg{
+                top:20%;
+                width: 800px;
+                height: auto;
+                vertical-align: middle;
+            }
+
+    .imagecontainer{
+        text-align: center;
+        margin:24px 0 12px 0;
+        position: relative;
+
+    }
+    .loginbutton{
+        background-color: purple;
+        color: white;
+        margin: 6px 20px;
+        padding: 2px 2px;
+        border:solid white;
+        cursor:pointer;
+        width:65%;
+        font-size:17px;
+    }
+
+    .modal1{
+        display:none;
+        position: fixed;
+        z-index:1;
+        left:0;
+        top:0;
+        width:100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0,4);
+    }
+
+    .modal-content1{
+        background-color:#ffdcf4;
+        margin:4% auto 15% auto;
+        border:4px solid #888;
+        width:45%;
+        height: 50%;
+        padding-bottom: 30px;
+    }
+
+    .close1{
+        position:absolute;
+        right: 25px;
+        top:0;
+        color:#000;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .close1:hover,.close1:focus{
+        color: red;
+        cursor: pointer;
+    }
+
+    .animate1{
+        animation: zoom 0.6s
+    }
+
+    @keyframes zoom{
+        from{tranform:scale(0)};
+        to{transform: scale(1);}
+    }
+            
+
+            .rgba-gradient {
+                background: rgba(35, 7, 77, 0.6);
+                background: -webkit-linear-gradient(to right, rgba(204, 83, 51, 0.6), rgba(35, 7, 77, 0.6));
+                background: linear-gradient(to right, rgba(204, 83, 51, 0.6), rgba(35, 7, 77, 0.6));
+            }
+            .box{
+        position: relative;
+        display: inline-block;
+        top:6%;
+        width:650px; 
+        height: 700px;
+    }
+    .box .text{
+        position: absolute;
+        z-index: 999;
+        margin: 0 auto;
+        left: 50%;
+        right: 0;
+        top: 30%; 
+        text-align: center;
+        width: 100%; 
+        font-weight: 900;
+    }
+    
+
+    .animated-text{
+        color:#3C1053FF;
+        position:absolute;
+        top:20%;
+        transform:translate(-50%,-50%);
+        padding:0 40px;
+        height:100px;
+        overflow: hidden;
+        font-weight:900;
+    }
+    .line{
+        font-family: sans-serif;
+        text-align: center;
+        font-size: 20px;
+        height: 60px;
+        line-height: 60px;
+        font-weight: 900;
+    }
+
+    .line:first-child{
+        animation: anim 12s infinite;
+    }
+    @keyframes anim{
+        0%{
+            margin-top: 0;
+        }
+        25%{
+            margin-top:-90px;
+        }
+        50%{
+            margin-top: -180px;
+        }
+        75%{
+            margin-top: -90px;
+        }
+        100%{
+            margin-top: 0;
+        }
+    }
+
+            .img-gradient:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(220, 66, 37, 0.5)), color-stop(100%, rgba(0, 47, 75, 0.5)));
+                background: -webkit-linear-gradient(top, rgba(0, 47, 75, 0.5) 0%, rgba(220, 66, 37, 0.5) 100%);
+                background: -o-linear-gradient(top, rgba(0, 47, 75, 0.5) 0%, rgba(220, 66, 37, 0.5) 100%);
+                background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 47, 75, 0.5)), to(rgba(220, 66, 37, 0.5)));
+                background: linear-gradient(to bottom, rgba(0, 47, 75, 0.5) 0%, rgba(220, 66, 37, 0.5) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002f4b', endColorstr='#00000000', GradientType=0);
+            }
+
+            img{ max-width:100%;}
+
+.gallery_box li{ width:33.333333%; max-width: 100% ; display:block; float:left; text-align: center; overflow: hidden;    position: relative;}
+.gallery_box{ padding:0;display: flow-root;}
+
+.gallery_box li:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.gallery_box li img{-webkit-transition: transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
+    transition: transform 0.5s ease;}
+.gallery_box li:nth-child(even) {
+    height: 304px;
+}
+.gallery_box li:nth-child(odd) {
+    height: 438px; 
+}
+.gallery_box li:nth-child(odd) .box_data{ background:rgba(0,0,0,0.17) }
+.gallery_box li:nth-child(even) .box_data{ background:rgba(0,44,255,0.27) }
+.gallery_box .box_data{ position:absolute; top: 0; left: 0; right:0; bottom:0; color:#fff;}
+.gallery_box .box_data span{ position:absolute; top: 50%; transform: translateY(-50%); left:0 ; right:0; font-size:24px;}
+.gallery_box li:hover .box_data{ background:rgba(255,0,39,0.55)}
+footer{
+    padding:20px;
+    margin-top: 20px;
+    color:white;
+background-color: #e8491d;
+text-align: center;
+
+}
+
+               </style>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+                
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <div class="logo">
+                    <img src="https://i.pinimg.com/originals/9d/55/14/9d55142fc746d73d515fff3502a0da6c.png"> <b>HEALTH BEATS</b>
+                </div>
+                    <ul class="navbar-nav ml-auto smooth-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#intro">HOME
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about" data-offset="90">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#audio" data-offset="90">MUSIC</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#overview" data-offset="90">OVERVIEW</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#feedback" data-offset="90">FEEDBACK</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contactus" data-offset="90">CONTACT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="loginbutton" href="/index.html">LOGOUT 
+                            </a>
+                        </li>
+                        </ul>
+                        <ul class="navbar-nav nav-flex-icons">
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="intro" class="py-5">
+         <div class=" d-flex justify-content-center align-items-center">
+                <div class="container px-md-3 px-sm-0">
+                    <div class="row wow fadeIn">
+                        <div class="col-md-12 mb-4 white-text text-center wow fadeIn">
+                            <div class="box">
+                                <img src="https://media.wired.com/photos/5e83e224845a6c00080f0ec2/master/w_1600%2Cc_limit/Gear-Headphones-1178171393.jpg" class="backimg">
+                                <div class="text">
+                                    <div class="animated-text">
+            <div class="line"><h1><b>WELCOME TO <br>HEALTH BEATS<br><%=name%></b></h1></div>
+            <div class="line"><br><h3><b><br>Support Your Health-</b></h3></div>
+            <div class="line"><br>If you want to keep your brain engaged throughout the aging process, listening to or playing music is a great tool. </div>
+        </div>
+        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="py-5">
+            <div class="container">
+                <h2 class="h1-responsive font-weight-bold text-center mb-5">Healing With <font color="purple">MusicMedicine</font></h2>
+                <div class="row">
+
+                    <div class="col-lg-5 text-center text-lg-left">
+                        <img class="img-fluid" src="https://exploringyourmind.com/wp-content/uploads/2015/10/music-mind.jpg" alt="Sample image" height="40">
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="row mb-3">
+                            <div class="col-1">
+                                <i class="fa fa-mail-forward fa-lg purple-text"></i>
+                            </div>
+                            <div class="col-xl-10 col-md-11 col-10">
+                                <h5 class="font-weight-bold mb-3"></h5>
+                                <p class="grey-text">HealthBeats is a streaming audio service designed to improve one's physical and mental health. Based on a patient's condition, HealthBeats offers specific music and sound therapies, which reference evidence-based clinical research. Music is prescribed just as medicine would be and a therapy plan schedules a precise dosage and treatment length.</p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-1">
+                                <i class="fa fa-mail-forward fa-lg purple-text"></i>
+                            </div>
+                            <div class="col-xl-10 col-md-11 col-10">
+                                <h5 class="font-weight-bold mb-3"></h5>
+                                <p class="grey-text">It's easier than ever before to better one's health. Let’s heal together.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1">
+                                <i class="fa fa-mail-forward fa-lg purple-text"></i>
+                            </div>
+                            <div class="col-xl-10 col-md-11 col-10">
+                                <h5 class="font-weight-bold mb-3"></h5>
+                                <p class="grey-text mb-0">
+                                    We're a non-profit organization with the goal of fostering healthier communities. HealthBeats is safe for prolonged use and is non-invasive. There are no negative side effects listening to binaural beats and isochronic tones.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="audio" class="text-center py-5" style=background-color:#eee;>
+            <div class="container">
+                <h2 class="h1-responsive font-weight-bold mb-5">SAMPLE MUSIC</h2>
+                <p class="grey-text w-responsive mx-auto mb-5">Music therapy is an established form of therapy to help individuals address physical, emotional, cognitive and social needs. Music helps reduce heart rate, lower blood pressure and cortisol in the body. It eases anxiety and can help improve mood.</p>
+
+                <ul class="gallery_box">
+    <li>
+        <a href="#0"><img src="https://picsum.photos/600/700/?random" onClick="document.getElementById('audio_play').play(); return false;" />
+            
+        <div class="box_data">
+            <span>MEDITATION</span>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <audio controls class="audios">
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/ogg">
+
+</audio>
+        </div></a>
+    </li>
+        <li>
+        <a href="#0"><img src="https://picsum.photos/600/701/?random">
+        <div class="box_data">
+            <span>EASE STRESS</span>
+            <br><br><br><br><br><br><br><br>
+            <audio controls>
+<source src="http://mirrors.standaloneinstaller.com/audio-sample/aac/in.aac" type="audio/ogg">
+</audio>
+        </div></a>
+    </li>
+        <li>
+        <a href="#0"><img src="https://picsum.photos/600/702/?random">
+        <div class="box_data">
+            <span>LOWER BLOOD PRESSURE</span>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <audio controls>
+<source src="http://www.hochmuth.com/mp3/Haydn_Adagio.mp3" type="audio/ogg">
+</audio>            
+
+        </div></a>
+    </li>
+            <li>
+        <a href="#0"><img src="https://picsum.photos/600/703/?random">
+        <div class="box_data">
+            <span>REDUCE ANXIETY</span>
+            <br><br><br><br><br><br><br><br>
+            <audio controls>
+<source src="http://www.hochmuth.com/mp3/Bloch_Prayer.mp3" type="audio/ogg">
+</audio>
+        </div></a>
+    </li>
+            <li style="position: relative;
+    top: -134px;">
+        <a href="#0"><img src="https://picsum.photos/600/704/?random">
+        <div class="box_data">
+            <span>CALM AND RELAX</span>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <audio controls>
+<source src="http://www.hochmuth.com/mp3/Tchaikovsky_Rococo_Var_orch.mp3" type="audio/ogg">
+</audio>
+        </div></a>
+    </li>
+            <li>
+        <a href="#0"><img src="https://picsum.photos/600/705/?random">
+        <div class="box_data">
+            <span>BOOST ENERGY</span>
+            <br><br><br><br><br><br><br><br>
+            <audio controls>
+<source src="http://www.hochmuth.com/mp3/Tchaikovsky_Nocturne__orch.mp3" type="audio/ogg">
+</audio>
+        </div></a>
+    </li>
+</ul>
+</div>
+</section>
+
+
+<div class="streak streak-md streak-photo" style="background-color:#E39FF6;"><CENTER>
+    <div class="flex-center rgba-black-light pattern-1">
+        <div class="white-text smooth-scroll mx-4">
+            <h2 class="h2-responsive mb-5 wow fadeIn">
+                <B>Want to explore further <%=name%>?</B><br>
+Click here..   </h2>            
+            <div class="text-center">
+                <a href="/explore.html" class="btn btn-outline-white wow fadeIn " data-offset="100" data-wow-delay="0.2s"><b>Explore</b></a>
+            </div>
+        </div>
+    </div></CENTER>
+</div>
+<section id="overview" class="text-center py-5" >
+    <div class="container">
+        <h2 class="h1-responsive font-weight-bold mb-5">Health Beats Manual</h2>
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4">
+                <div class="card card-cascade narrower">
+                    <div class="view view-cascade">
+                        <img class="card-img-top" src="http://www.successlifelounge.com/wp-content/uploads/2017/12/music.jpg"
+                        alt="Card image cap">
+                        <a>
+                            <div class="mask img-gradient"></div>
+                        </a>
+                    </div>
+                    <div class="card-body card-body-cascade">
+                        <h5 class="pink-text pb-2 pt-1"><i class="fa fa-cutlery"></i> Overview</h5>
+                        <h4 class="font-weight-bold card-title">What is HealthBeats Mission</h4>
+                        
+                                        <div class="container">
+                            <button type="button" class="btn btn-unique"data-toggle="modal"data-target="#myModal">View</button>
+                        <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h4 class="modal-title">What is HealthBeats Mission</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>HealthBeats streaming service supports users physical and mental health by pairing medical research with active music links while ensuring convenience and proven results.
+We offer everybody an easy and alternative way to improve their health on their own.HealthBeats also allows individuals with specific syndromes to use therapies in addition to medical treatment.
+HealthBeats therapies may increase the efficacy of pharmaceutical drugs and shorten hospital stays.
+Our service can even support individuals after they are released from a hospital or clinic into home care.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 mb-4">
+                <div class="card card-cascade narrower">
+                    <div class="view view-cascade">
+                        <img class="card-img-top" src="https://www.probuilder.com/sites/probuilder/files/searching-on-google.jpeg"
+                        alt="Card image cap">
+                        <a>
+                            <div class="mask img-gradient"></div>
+                        </a>
+                    </div>
+                    <div class="card-body card-body-cascade">
+                        <h5 class="pink-text pb-2 pt-1"><i class="fa fa-cutlery"></i> User Features</h5>
+                        <h4 class="font-weight-bold card-title">It's Easy to start</h4>
+                        <div class="container">
+                            <button type="button" class="btn btn-unique"data-toggle="modal"data-target="#myModal2">View</button>
+                        <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">It's Easy to start</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <class class="modal-body">
+          <p>
+After a simple registration and login process,you'll be guided to our dashboard where you can choose your audio regarding the problem you face. You can even explore more audios by clicking explore button in this page. Use the buttons to navigate to the audios.
+Choose between the therapies tailored for specific diagnoses,symptoms,and other various categories.
+</p></class>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="feedback" class="text-center py-5">
+    <div class="container">
+        <h2 class="h1-responsive font-weight-bold mb-5">Feedback</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card card-cascade narrower">
+                    <div class="card-body card-body-cascade">
+                        <p class="card-text">"Iam in awe of this work.It is so important and is making a real difference in my life.I feel there is a revolution happening to heal the planet, and this modality is working internally with sound to rewire our systems."</p>
+                        <h5 class="pink-text pb-2 pt-1"><i class="fa fa-cutlery"></i> Sameer</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card card-cascade narrower">
+                    <div class="card-body card-body-cascade">
+                        <p class="card-text">"Iam a student before attempting an exam I used to calm my mind by listening to Healthbeats.While listening to HealthBeats. I gained confidence and it made me feel better,got relief from all the stress."</p>
+                        <h5 class="pink-text pb-2 pt-1"><i class="fa fa-cutlery"></i> Harika</h5>                  
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card card-cascade narrower">
+                    <div class="card-body card-body-cascade">
+                        <p class="card-text">"HealthBeats has changed my life. <br>I play the sounds,tones,and songs during my work day to help me focus. <br>
+                        I use the playlists to balance my energy."</p>
+                        <h5 class="pink-text pb-2 pt-1"><i class="fa fa-cutlery"></i><br> Ramesh</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<a class="btn btn-primary btn-floating btn-fb mx-1"href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqWhHKjWVfJbnKNKCFHJMmJvKcgDxzgHkhmLHlCRxZncHDKwCBTGtTwWrLcNHfgrkBbZlV"target="_blank">Share your thoughts on
+                    <i style="font-size:24px" class="fa">&#xf0e0;</i>
+                </a>
+</section>
+<section id="contactus" class="text-center py-5" style=background-color:#eee;>
+<center>
+<div class="col-md-3 text-center">
+    
+    <h2>Contact us</h2><br>
+    
+            <i class="fa fa-map-marker fa-2x purple-text align"></i>
+             <p>Health Beats,XXXX</p>
+        
+            <i class="fa fa-phone fa-2x mt-4 purple-text"></i>
+            <p>+01 234 567 89</p>
+        
+            <i class="fa fa-envelope fa-2x mt-4 purple-text"></i>
+            <p class="mb-0">health.beats21@gmail.com</p>
+        </center>
+</div>
+</section>
+</main>
+<footer class="page-footer font-small pt-4">
+    <div class="container">
+        <p text-align:center;margin-left: auto;
+    margin-right: auto;
+    width: 8em;>HealthBeats Copyright &#169; 2021</p>
+        
+    </div>
+</footer>
+</body>
+</html>

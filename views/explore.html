@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>BCT0218nBCT0184 explore</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+       
+        <link rel="stylesheet" type="text/css" href="jqueryui.css">
+        
+        <style type="text/css">
+        	body {
+    font-family: sans-serif;
+    background: linear-gradient(to right, #9c27b0, #8ecdff);
+}
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    color: rgb(73, 4, 87);
+    margin-bottom: 30px;
+}
+h3 {
+    color: #40024b;
+}
+.logo{
+    flex-basis:20%;
+}
+.logo img{
+    width:40px;
+    text-align: center;
+}
+.container {
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1000px;
+    text-align: center;
+}
+.container .music-container{
+    display:flex;
+    align-items: center;
+    flex-flow:column;
+}
+
+.container .music-container .box{
+    height:8rem;
+    width:80%;
+    display:flex;
+    align-items:center;
+    background: rgb(233, 201, 229);
+    border-radius: 1rem;
+    box-shadow:0 .5rem 1rem #000;
+    overflow: hidden;
+    margin:2rem;
+}
+.container .music-container .box .image{
+    height:100%;
+    width:25%;
+}
+.container .music-container .box .image img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+.container .music-container .box .music{
+    width:75%;
+}
+.container .music-container .box .music audio{
+    width:100%;
+    outline:none;
+}
+.container .music-container .box .music audio::-webkit-media-controls-enclosure{
+    background: none;
+}
+@media(max-width:600px){
+    .container .music-container .box{
+        height: 27rem;
+        width:90%;
+        flex-flow: column;
+    }
+    .container .music-container .box .image{
+        height: 20%;
+        width: 100%;
+    }
+}
+.nav {
+  position: relative;
+  overflow: hidden;
+  margin-left: 5%;
+}
+.nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+        </style>
+    </head>
+    <body>
+        <div class="logo">
+            <img src="https://i.pinimg.com/originals/9d/55/14/9d55142fc746d73d515fff3502a0da6c.png"> 
+        </div>
+        <div class="container">
+            <h1>&#x2728; HEALTH BEATS &#x2728;</h1>
+            
+         <div class="nav">
+            <nav class="navbar navbar-expand-lg navbar-drak justify-content-center">
+                <ul class="navbar-nav ml-auto smooth-scroll">
+                    
+                        <a class="nav-link btn btn-dark mr-4" href="#meditation">Meditation</a>
+
+                        <a class="nav-link btn btn-dark mr-4" href="#stress" data-offset="90">Sress release</a>
+                   
+                        <a class="nav-link btn btn-dark mr-4" href="#bp" data-offset="90">Blood pressure</a>
+                    
+                        <a class="nav-link btn btn-dark mr-4" href="#anxiety" data-offset="90">Anxiety</a>
+                    
+                        <a class="nav-link btn btn-dark mr-4" href="#relax" data-offset="90">Calm & relax</a>
+    
+                        <a class="nav-link btn btn-dark mr-4" href="#energyboost" data-offset="90">Energy boosting</a>
+                    </ul>
+                    </nav>
+            </div><center><br>
+                <br>
+        <div class="music-container">
+            <section id="meditation">
+            <h3><u>Meditation</u></h3>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/1001850/pexels-photo-1001850.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="http://www.hochmuth.com/mp3/Haydn_Cello_Concerto_D-1.mp3" controls></audio>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/1490844/pexels-photo-1490844.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="http://www.hochmuth.com/mp3/Vivaldi_Sonata_eminor_.mp3" controls></audio>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/374808/pexels-photo-374808.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="http://www.hochmuth.com/mp3/Boccherini_Concerto_478-1.mp3" controls></audio>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/235534/pexels-photo-235534.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="http://www.hochmuth.com/mp3/Bloch_Prayer.mp3" controls></audio>
+                </div>
+            </div></section>
+            <section id="stress">
+            <h3><u>Stress release</u></h3>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/1174170/pexels-photo-1174170.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="http://www.hochmuth.com/mp3/Tchaikovsky_Rococo_Var_orch.mp3" controls></audio>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/2240771/pexels-photo-2240771.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="http://www.hochmuth.com/mp3/Beethoven_12_Variation.mp3" controls></audio>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/374703/pexels-photo-374703.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-15.mp3" controls></audio>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/96380/pexels-photo-96380.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-13.mp3" controls></audio>
+                </div>
+            </div></section>
+            <section id="bp">
+            <h3><u>Blood pressure</u></h3>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/3831187/pexels-photo-3831187.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="http://www.hochmuth.com/mp3/Tchaikovsky_Nocturne__orch.mp3" controls></audio>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/5538618/pexels-photo-5538618.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="http://www.hochmuth.com/mp3/Haydn_Cello_Concerto_D-1.mp3" controls></audio>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/3767420/pexels-photo-3767420.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="http://www.hochmuth.com/mp3/Haydn_Adagio.mp3" controls></audio>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/3776557/pexels-photo-3776557.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="http://www.hochmuth.com/mp3/Bloch_Prayer.mp3" controls></audio>
+                </div>
+            </div></section>
+            <section id="anxiety">
+            <h3><u>Anxiety</u></h3>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/6403/people-woman-girl-technology.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-12.mp3" controls></audio>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/374912/pexels-photo-374912.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3" controls></audio>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/3765030/pexels-photo-3765030.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-11.mp3" controls></audio>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/5965927/pexels-photo-5965927.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" controls></audio>
+                </div>
+            </div></section>
+            <section id="relax">
+            <h3><u>Calm and relaxing</u></h3>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/4571219/pexels-photo-4571219.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="http://www.hochmuth.com/mp3/Vivaldi_Sonata_eminor_.mp3" controls></audio>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/3771823/pexels-photo-3771823.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="http://www.hochmuth.com/mp3/Haydn_Adagio.mp3" controls></audio>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/3790797/pexels-photo-3790797.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" controls></audio>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/3768158/pexels-photo-3768158.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" controls></audio>
+                </div>
+            </div></section>
+            <section id="energyboost">
+            <h3><u>Energy boosting</u></h3>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/4498187/pexels-photo-4498187.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="http://www.hochmuth.com/mp3/Haydn_Adagio.mp3" controls></audio>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/3771813/pexels-photo-3771813.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" controls></audio>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/8133383/pexels-photo-8133383.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" controls></audio>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/3800507/pexels-photo-3800507.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                </div>
+                <div class="music">
+                    <audio src="http://www.hochmuth.com/mp3/Tchaikovsky_Nocturne__orch.mp3" controls></audio>
+                </div>
+            </div></section>
+
+    </div>
+    </div>
+</center>
+    
+    </body>
+</html>

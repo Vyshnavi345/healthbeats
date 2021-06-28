@@ -1,0 +1,39 @@
+/*body,
+ table,
+    thead,
+    tr,
+    tbody,
+    th,
+    td {
+        text-align: center;
+    }*/
+    body{
+        text-align: center !important;
+        background: linear-gradient(to right, #9c27b0, #8ecdff);
+    }
+    p{
+        margin-top: 20px;
+        font-size: 30px;
+        color:rgb(119, 12, 119);
+    }
+    input{
+        text-align: center;
+    }
+    .mssg{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
+    .logo{
+        display: flex;
+    }
+    .logo img{
+        width:40px;
+        text-align: center;
+    }
+    .btn{
+        background-color: purple;
+        color: white;
+        border:solid white;
+       
+    }
